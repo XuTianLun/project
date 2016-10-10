@@ -1,0 +1,35 @@
+[
+	{
+	    "brand":"Hermes 爱马仕",
+		"theme":"Birkin铂金包30纯白色01号金扣牛皮手提包",
+		"id":"5lux070498g_p137564",
+		"price":"158000",
+		"off":"0.2",
+		"color":"白色系",
+		"bigimgurl":"../img/detail/detail01.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail01.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail02.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail03.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail04.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail05.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail06.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail07.jpg"
+	},
+	{
+	   "smallimgurl":"../img/detail/detail08.jpg"
+	}
+]

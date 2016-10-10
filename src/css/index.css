@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/*//轮播图*/
+.lbtpic{
+	width: 100%;
+	
+}
+.lbtpic .lbt{
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+
+
+/*brand*/
+.brand{
+	width: 100%;
+}
+.brand1{
+	width: 1000px;
+	position: relative;
+	border-top: 1px solid #666666;
+	margin:0 auto;
+	margin-top: 50px;
+}
+.brand1 .brand_head{
+	position:absolute;
+	padding:0 20px;
+	background: #fff;
+	text-align: center;
+	left:400px;
+	top:-25px;
+}
+.brand1 .brand_head p{
+	text-align: center;
+	font-size: 30px;
+	color: #000000;
+	font-weight: 600;
+}
+.brand_foot{
+	padding-top: 80px;
+	height: 330px;
+
+}
+
+/*hotstore*/
+.hotstore{
+	width: 100%;
+}
+.hotstore1{
+    position: relative;
+	border-top: 1px solid #666666;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.hotstore_head{
+	position:absolute;
+	padding:0 20px;
+	background: #fff;
+	text-align: center;
+	left:350px;
+	top:-20px;
+	
+}
+
+.hotstore1 .hotstore_head p{
+	text-align: center;
+	font-size: 30px;
+	color: #000000;
+	font-weight: 600;
+}
+.hotstore_foot{
+	padding-top: 50px;
+	width: 1000px;
+	height: 240px;
+	
+}
+.hotstore_foot p{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 80px;
+	
+	}
+
+

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+
+/*注册*/
+.rpic{
+	width: 100%;
+}
+.r_pic{
+	position: relative;
+	width: 1263px;
+	margin: 0 auto;
+	padding-bottom: 200px;
+}
+.r_pic img{
+	width: 1263px;
+}
+
+#register{
+	position: absolute;
+	top:45px;
+	left: 700px;
+	width: 460px;
+	height: 550px;
+	background: #fff;
+	border: 1px solid #C1C1C1;
+}
+#register ul li label{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+#register ul{
+	padding-left: 40px;
+}
+#register ul li{
+	height: 35px;
+	
+}
+#register ul li input{
+	width: 200px;
+	height: 30px;
+}
+#register .re_title_way{
+	padding-top: 20px;
+	height: auto;
+	border: none;
+	border-bottom: 1px solid #1F2021;
+}
+.re_method_now{
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background: #1F2021;
+	color:orange;
+}
+.re_method_now1{
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background: #1F2021;
+	color: #fff;
+}
+/*邮箱注册隐藏*/
+.re_con1{
+	display: none;
+}
+.clear_email{
+	display: none;
+}
+#register #mreember{
+	width:auto;
+	height: auto;
+
+}
+.get_sms_code{
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+	cursor: pointer;
+}
+.register_btn{
+	width: 200px;
+	height: 40px;
+	font-size: 18px;
+	color: #fff;
+	background: orangered;
+	border: none;
+	margin-left: 100px;
+}
+
+#register .msg_tips{
+	display: inline-block;
+	margin-left: 110px;
+	margin-top: 10px;
+	
+}

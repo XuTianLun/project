@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册完成</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/register_achieve.css" />
+		<script type="text/javascript" src="../js/jquery-1.12.0.js" ></script>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/cookie_common.js" ></script>
+		<script>
+			jQuery(function($){
+				$('#_head').load('head.html');
+				
+				$('#_footer').load('footer.html');
+				
+				$('.btn').click(function(){
+					window.location.href="http://localhost:3000/project/src/index.html";
+				})
+			});
+		
+		</script>
+	
+	</head>
+	<body>
+		<div id="_head">
+			
+		</div>
+		<div class="succeed_one">
+			<div class="succeed_two">
+				<h3>恭喜您，注册成功！</h3>
+				<p>尊敬的<span class="cookie_uersname">&emsp;</span>，恭喜您已成为第五大道会员，即刻您可以开启时尚购物之旅</p>
+				<div>
+				<input class="btn" type="button" value="开始购物" />
+				</div>
+				<p>完成个人信息即可获得500积分，<a href="#">我要填写</a></p>
+			</div>
+		</div>
+		<div id="_footer">
+			
+		</div>
+		
+	</body>
+</html>

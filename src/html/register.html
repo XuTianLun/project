@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+		<script type="text/javascript" src="../js/jquery-1.12.0.js" ></script>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/register.js" ></script>
+	</head>
+	<body>
+		<div class="r_header">
+			<div class="r_head">
+				<img src="../img/logo.jpg"/>
+				<p>注册第五大道</p>
+				<h4>
+					<img src="../img/register/8-132_03.jpg"/>
+					<span>客服热线：400-600-5610</span>
+				</h4>
+			</div>
+		</div>
+		<div class="rpic">
+			<div class="r_pic">
+			<img src="../img/register/zhuce.jpg" />
+			<form id="register"  action="register_achieve.html" method="get">
+				<ul>
+                    <li class="re_title_way">
+                       
+                        <span class="re_method_now">使用手机注册</span>
+                         <span class="re_method_now1">使用邮箱注册</span>
+                    </li>
+                    <li class="clear">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="re_con" style="position: relative;">
+                        <label for="phone">您的手机：</label>
+                        <input id="mobile_phone" name="mobile_phone" class=" text" info="" type="text">
+                                
+                        <span class="get_sms_code">
+                        <span id="get_phone_button">获取验证码</span>
+                        </span>
+                    </li>
+                     <li class="clear1">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="re_con1" style="position: relative;">
+                        <label for="email">您的邮箱：</label>
+                        <input id="email" name="email" class=" text" info="" type="text"><span class="msg_tips"></span>                        
+                      
+                    </li>
+                    <li class="clear_email">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="re_con2">
+                        <label for="phonecode">手机验证码：</label>
+                        <input id="mobile_phone_code" name="mobile_phone_code" class=" text" info="" type="text">
+                        
+                    </li>
+                     <li class="clear2">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="re_con3">
+                        <label for="password">密码：</label>
+                        <input id="password" name="password" class="password" info="" type="password">
+                       
+                    </li>
+                     <li class="clear3">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="re_con4">
+                        <label for="password_confirm">确认密码：</label>
+                        <input id="password_confirm" name="password_confirm" class=" password" info="" type="password">
+                    
+                    </li>
+                    <li class="clear4">
+                    	 <span class="msg_tips"></span> 
+                    </li>
+                    <li class="tongyi">
+                        <input id="mreember" name="comfirmiterm" value="1" onclick="return false" checked="checked" type="checkbox">
+                                                                           我已阅读并同意                         
+                        <a href="http://www.5lux.com/help/question/112" target="_blank">《第五大道商城服务条款》</a>
+                    </li>
+                    <li>
+                        <input value="注册" class="register_btn" onclick="" type="submit">
+                    </li>
+                    <li class="login_re" style="margin-top: 10px;">                            
+                        <span>已有账号?</span><a href="register1.html">立即登录</a>
+                    </li>
+                    <li class="re_tishi">
+                        立即注册免费获得<span>1880元</span>优惠券
+                    </li>
+                </ul>
+                   
+                
+			</form>
+			
+			</div>
+		</div>
+		<div id="_footer">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+
+/*定位菜单*/
+#pos1{
+	position: absolute;
+	right: 0;
+	
+}
+#pos1 ul li{
+	width: 35px;
+	height: 40px;
+}
+#pos1 ul .one{
+	background: url(img/pos1.png) no-repeat;
+}
+#pos1 ul .two{
+	background: url(img/pos1.png) no-repeat 0 -40px;
+}
+#pos1 ul .three{
+	background: url(img/pos1.png) no-repeat 0 -80px;
+}
+#pos1 ul .fouth{
+	background: url(img/pos1.png) no-repeat 0 -120px;
+}
+
+#pos2{
+	position: absolute;
+	right: 0;
+	
+}
+#pos2 ul li{
+	width: 35px;
+	height: 45px;
+	background: #CF0101;
+}
+#pos2 ul .fifth{
+	background: url(img/pos2.png) no-repeat;
+}
+#pos2 ul .sixth{
+	background: url(img/pos2.png) no-repeat 0 -40px;
+}
+#pos2 ul .seventh{
+	background: url(img/pos2.png) no-repeat 0 -80px;
+}
+#pos2 ul .eighth{
+	background: url(img/pos2.png) no-repeat 0 -130px;
+}
+
+/*注册头部*/
+.r_header{
+	width: 100%;
+	
+}
+.r_head{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	height: 110px;
+}
+.r_head img,.r_head p{
+	float: left;
+}
+.r_head p{
+	padding:50px 0 0 30px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #999;
+}
+.r_head h4{
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	
+	font-size: 18px;
+	color: #666;
+
+}
+.r_head h4 span{
+	display: inline-block;
+	padding-top: 2px;
+}

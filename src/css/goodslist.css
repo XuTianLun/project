@@ -1,0 +1,16 @@
+@charset "utf-8";
+.goodlist{
+	width: 100%;
+}
+.goodslist{
+	width: 1000px;
+	margin: 0 auto;
+}
+.goodslist:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
