@@ -5,31 +5,16 @@
 		"id":"5lux070498g_p137564",
 		"price":"158000",
 		"off":"0.2",
+		"smallimgurl":[{"smallimgurl":"../img/detail/detail01.jpg"},
+		               {"smallimgurl":"../img/detail/detail02.jpg"},
+		               {"smallimgurl":"../img/detail/detail03.jpg"},
+		               {"smallimgurl":"../img/detail/detail04.jpg"},
+		               {"smallimgurl":"../img/detail/detail05.jpg"},
+		               {"smallimgurl":"../img/detail/detail06.jpg"},
+		               {"smallimgurl":"../img/detail/detail07.jpg"},
+		               {"smallimgurl":"../img/detail/detail08.jpg"}
+		              ],
 		"color":"白色系",
 		"bigimgurl":"../img/detail/detail01.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail01.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail02.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail03.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail04.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail05.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail06.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail07.jpg"
-	},
-	{
-	   "smallimgurl":"../img/detail/detail08.jpg"
 	}
 ]

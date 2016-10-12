@@ -1,7 +1,7 @@
 jQuery(function($){
 	$.ajax({
 		type:"get",
-		url:"/data/goodlist.json",
+		url:"/project/src/json/goodlist.json",
 		async:true,
 		success : function(res){
 			console.log(res);

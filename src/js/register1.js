@@ -16,7 +16,7 @@ jQuery(function($){
 				var istrue = true;
 				$.ajax({
 					type:"get",
-					url:"/data/username.json",
+					url:"/project/src/json/username.json",
 					async:false,
 					success:function(res){
 						console.log(res);

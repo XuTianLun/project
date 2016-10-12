@@ -44,7 +44,7 @@ jQuery(function($){
 jQuery(function($){
 				$.ajax({
 					type:"get",
-					url:"/data/lbtImg.json",
+					url:"/project/src/json/lbtImg.json",
 					dataType:'json',
 					async:true,
 					success : function(res){
@@ -85,7 +85,7 @@ jQuery(function($){
 				//推荐品牌图片ajax加载
 				$.ajax({
 					type:"get",
-					url:"/data/pinpai.json",
+					url:"/project/src/json/pinpai.json",
 					dataType:'json',
 					async:true,
 					success : function(res){
@@ -118,7 +118,7 @@ jQuery(function($){
 				var $hotstore = $('.hotstore_foot');
 				$.ajax({
 					type:"get",
-					url:"/data/hotstore.json",
+					url:"/project/src/json/hotstore.json",
 					dataType:'json',
 					async:true,
 					success : function(res){

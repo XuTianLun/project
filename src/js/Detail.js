@@ -3,7 +3,7 @@
 jQuery(function($){
 				$.ajax({
 					type:"get",
-					url:"/data/detail.json",
+					url:"/project/src/json/detail.json",
 					async:true,
 					dataType:'json',
 					success : function(res){
@@ -16,11 +16,13 @@ jQuery(function($){
 						$.each(res, function(idx,item) {
 							$goodsleft.find('.fdj').find('img').attr("src",item.bigimgurl);//设置大图片的路径
 							//小图片的路径
-							if(item.smallimgurl){
+							$.each(item.smallimgurl, function(idx,ele) {
 								var $li = $('<li/>');
-								$('<img/>').attr('src',item.smallimgurl).appendTo($li);
+								$('<img/>').attr('src',ele.smallimgurl).appendTo($li);
 								$li.appendTo($ul);
-							}
+							});
+								
+							
 							//右边商品简介
 							if(item.id){
 							var $li1 = $('<li/>').css({"padding-bottom":"10px","border-bottom":"1px dashed #ccc"});
@@ -245,8 +247,7 @@ jQuery(function($){
 			jQuery(function($){
 				$.ajax({
 					type:"get",
-					url:"/data/detail_brand.json",
-					
+					url:"/project/src/json/detail_brand.json",
 					dataType:'json',
 					async:true,
 					success : function(res){
@@ -263,6 +264,7 @@ jQuery(function($){
 					}
 				});
 			});
+			//详细信息的隐藏于显示
 			jQuery(function($){
 				var $list = $('#list');
 				var $move = $('.move');
