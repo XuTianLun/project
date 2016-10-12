@@ -15,7 +15,7 @@ jQuery(function($){
 						var $ul1 = $('<ul/>');
 						$.each(res, function(idx,item) {
 							$goodsleft.find('.fdj').find('img').attr("src",item.bigimgurl);//设置大图片的路径
-							//小图片的路径
+							//放大镜下方小图片的路径
 							$.each(item.smallimgurl, function(idx,ele) {
 								var $li = $('<li/>');
 								$('<img/>').attr('src',ele.smallimgurl).appendTo($li);
@@ -73,14 +73,14 @@ jQuery(function($){
 						});
 						//小图列表的左右移动
 						var liwidth = $smallpic.find('li').width()+10;
-						var i=0;
+						var j=0;
 						$smallpic.parent().find(".left-sp").on('click',function(){
-							i--;	
-							$smallpic.find('ul').animate({left:-i*liwidth});
+							j--;	
+							$smallpic.find('ul').animate({left:-j*liwidth});
 						});
 						$smallpic.parent().find(".right-sp").on('click',function(){
-							i++;
-							$smallpic.find('ul').animate({left:-i*liwidth});	
+							j++;
+							$smallpic.find('ul').animate({left:-j*liwidth});	
 						});
 						//右边信息
 						//商品数量
