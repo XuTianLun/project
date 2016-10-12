@@ -74,8 +74,11 @@
 	font-size: 12px;
 }
 .goodcarlist_end .settlement .last_ul .total{
+	position: relative;
+	
     font-size: 12px;
     width: 100px;
+    /*border: 1px solid #1E90FF;*/
 }
 .goodcarlist_end .settlement .last_ul .pay{
 	display: block;
@@ -88,4 +91,101 @@
 	background: #DF1A23;
 	margin-left: 10px;
 	margin-top: -10px;
+}
+
+/*//根据cookie增加的商品信息的样式*/
+.goodcarlist_end .good_ul{
+	width: 1000px;
+	border-bottom: 1px solid #999999;
+}
+.goodcarlist_end .good_ul:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.goodcarlist_end .good_ul li{
+	float: left;
+	/*border: 1px solid #CF0101;*/
+	text-align: center;
+	height: 80px;
+	width: 120px;
+	line-height: 80px;
+	/*border: 1px solid #CF0101;*/
+}
+.goodcarlist_end .good_ul li img{
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	
+}
+.goodcarlist_end .good_ul .good_li3{
+	
+	font-size: 12px;
+	color: #303030;
+	line-height: 30px;
+}
+.goodcarlist_end .good_ul .good_li4{
+	
+	font-size: 14px;
+	
+}
+.goodcarlist_end .good_ul .good_li5{
+	color: orangered;
+	font-size: 20px;
+}
+.goodcarlist_end .good_ul .good_li7{
+	color: orangered;
+	font-size: 20px;
+}
+.goodcarlist_end .good_ul .good_a{
+	display: block;
+	width: 80px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: dodgerblue;
+	/*border: 1px solid #1E90FF;*/
+}
+.goodcarlist_end .good_ul .good_b{
+	display: block;
+	width: 80px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: dodgerblue;
+	/*border: 1px solid #1E90FF;*/
+}
+.jian{
+	display:inline-block;
+	border: 1px solid #C1C1C1;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	background: #CCCCCC;
+	cursor: pointer;
+}
+.txt{
+	display:inline-block;
+	border: 1px solid #C1C1C1;
+	margin-left: 1px;
+	margin-right: 1px;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+}
+.jia{
+	display:inline-block;
+	border: 1px solid #C1C1C1;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	background: #CCCCCC;
+	cursor: pointer;
 }
