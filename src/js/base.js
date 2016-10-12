@@ -3,7 +3,7 @@
      //设置cookie
       function setCookie(name,value,expires,path,domain,secure){
 //   	name=value
-           var cookieText = encodeURIComponent(name)+"="+encodeURIComponent(value);
+           var cookieText = name+"="+value;
            if(expires instanceof Date){
            	cookieText +=";expires="+expires;
            }
@@ -21,7 +21,7 @@
      }
       //   获取cookie
         function getCookie(name){
-        	var cookie = decodeURIComponent(document.cookie);
+        	var cookie = document.cookie;
         	var arr = cookie.split("; ");  //;加空格，可视情况改变
         	for(var i=0; i<arr.length;i++)
         	{
@@ -38,7 +38,7 @@
         //删除cookie
         function removeCookie(name){
         	var d = new Date();
-        	 document.cookie = encodeURIComponent(name)+"=;expires="+d;
+        	 document.cookie = name+"=;expires="+d;
         	return document.cookie;
         	
         }

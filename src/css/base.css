@@ -121,7 +121,7 @@
 	width: 100px;
 	height: 35px;
 	border: 1px solid #C1C1C1;
-	z-index: 4;
+	
 	background: url(../img/img1/v30cart.png) no-repeat 10px center;
 	/*overflow: hidden;*/
 }
@@ -151,14 +151,16 @@
 	font-size: 12px;
 	
 }
-.logo .goodcar .goodcar_list .float{
+.logo .goodcar .float{
 	width: 100px;
 	height: 2px;
 	background: #fff;
 	position: absolute;
+	display: none;
 	z-index: 3;
 	right:0;
-	top: -1px;
+	bottom: -1px;
+	
 }
 /*nav*/
 .nav{

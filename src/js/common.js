@@ -1,4 +1,5 @@
 $(function(){
+	
 			//固定菜单滚动
 		        var $pos1 = $('#pos1');
 				var $pos2 = $('#pos2');
@@ -29,9 +30,11 @@ $(function(){
 				
 				$(this).css({"border-bottom":"1px solid #fff"});
 				$('.goodcar_list').css({"display":"block"});
+				$(this).find('.float').css({"display":"block"});
 			}).on('mouseleave',function(){
 				$(this).css({"border-bottom":"1px solid #c1c1c1"});
 				$('.goodcar_list').css({"display":"none"});
+				$(this).find('.float').css({"display":"none"});
 			});
 			
 			//商品分类二级菜单
@@ -49,4 +52,4 @@ $(function(){
 					$(this).parent().stop().fadeOut();
 				});
 			
-		})
+		});

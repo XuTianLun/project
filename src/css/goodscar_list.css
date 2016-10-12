@@ -1,0 +1,91 @@
+@charset "utf-8";
+.goodcar_list_end{
+	width: 100%;
+}
+.goodcar_list_end .goodcarlist_end{
+	width: 1000px;
+	margin: 0 auto;
+}
+.goodcarlist_end .car_pic{
+	padding-top: 30px;
+	
+	margin-left: 300px;
+}
+
+.goodcarlist_end .list_div
+{
+	padding-top: 30px;
+}
+.goodcarlist_end .list_div .first-ul{
+	width: 1000px;
+	background: #CCC;
+	border-bottom: 1px solid #666666;
+}
+.goodcarlist_end .list_div .first-ul:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.goodcarlist_end .list_div .first-ul li{
+	float: left;
+	/*border: 1px solid #CF0101;*/
+	text-align: center;
+	height: 30px;
+	width: 120px;
+	line-height: 30px;
+}
+.goodcarlist_end .settlement{
+	width: 1000px;
+	height: 100px;
+}
+.goodcarlist_end .settlement .last_ul{
+	padding-top: 40px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #999999;
+}
+.goodcarlist_end .settlement .last_ul:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	
+}
+.goodcarlist_end .settlement .last_ul li{
+	list-style: none;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.goodcarlist_end .settlement .last_ul .jx{
+	font-size: 12px;
+	
+	border-right: 1px solid #999999;
+}
+.goodcarlist_end .settlement .last_ul .clear{
+	font-size: 12px;
+}
+.goodcarlist_end .settlement .last_ul .there{
+	margin-left: 500px;
+	font-size: 12px;
+}
+.goodcarlist_end .settlement .last_ul .total{
+    font-size: 12px;
+    width: 100px;
+}
+.goodcarlist_end .settlement .last_ul .pay{
+	display: block;
+	width: 100px;
+	height:30px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	color: #fff;
+	background: #DF1A23;
+	margin-left: 10px;
+	margin-top: -10px;
+}

@@ -48,7 +48,8 @@ jQuery(function($){
 					dataType:'json',
 					async:true,
 					success : function(res){
-
+                        console.log(res);
+                        console.log(typeof res);
 						var $lbt = $('.lbt');
 						var $ul = $('<ul/>');
 						

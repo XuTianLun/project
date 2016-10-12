@@ -1,10 +1,12 @@
 @charset "utf-8";
 .goodlist{
 	width: 100%;
+	
 }
 .goodslist{
 	width: 1000px;
 	margin: 0 auto;
+	/*border: 1px solid #CF0101;*/
 }
 .goodslist:after{
 	content: ".";
@@ -13,4 +15,91 @@
 	height: 0;
 	overflow: hidden;
 	visibility: hidden;
+}
+.list_head{
+	margin-top: 10px;
+}
+.goodslist a{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 16px;
+}
+.list_li{
+	list-style: none;
+	
+	margin-top: 15px;
+
+}
+.list_li:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.list_li li{
+	list-style: none;
+	float: left;
+}
+.list_li li a{
+	display: block;
+	width: 50px;
+	margin: 0;
+	font-size: 12px;
+	text-align: center;
+	padding: 5px 0;
+	text-decoration: none;
+    border: 1px solid #CCCCCC;
+}
+.list_li li .first_a{
+	background: #666666;
+	color: #fff;
+}
+
+.list_good{
+	margin-top: 20px;
+
+}
+.list_good:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.list_good .list_div{
+	float: left;
+	width: 250px;
+	height: 350px;
+}
+.list_good .pic{
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+}
+.list_good .list_p{
+	font-size: 12px;
+	text-align: center;
+	color: #1F2021;
+}
+.list_good .list_h3{
+	font-size: 12px;
+	
+	margin: 0 auto;
+	margin-top: 10px;
+	color: #303030;
+	text-align: center;
+	white-space: nowrap;
+    width: 200px;               /* IE6 需要定义宽度 */
+    overflow: hidden;             
+    -o-text-overflow: ellipsis;    /* Opera */
+    text-overflow:    ellipsis;    
+}
+.price{
+	color:#FF8400;
+	font-size:16px;
+	margin-top:10px;
+	text-align: center;
 }

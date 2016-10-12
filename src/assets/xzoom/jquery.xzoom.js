@@ -7,6 +7,7 @@
 			gap:30,
 			backgroundcolor:"#c1c1c1",
 			opacity:0.3,
+			ratio:2,
 			position:'right'
 		};
 		
@@ -37,8 +38,8 @@
 			$self.on('mouseenter',function(){
 				//把放大镜写入$self
 				$min.css({
-					width:opt.width/ratio,
-					height:opt.height/ratio,
+					width:opt.width/opt.ratio,
+					height:opt.height/opt.ratio,
 					background:opt.backgroundcolor,
 					opacity:opt.opacity,
 				}).appendTo($self);
@@ -111,11 +112,11 @@
 				//添加全局类名xzoom
 				
 				$self.addClass('xzoom').width($smallImg.outerWidth());
-			
+			    
 				//创建大盒子
 				$big = $('<div/>').addClass('xzoom-big').css({width:opt.width,height:opt.height});
 				//创建大图
-				$bigImg = $('<img/>').attr({src:bigUrl});
+				$bigImg = $('<img/>').attr({src:bigUrl}).css({width:$smallImg.outerWidth()*opt.ratio,height:$smallImg.outerHeight()*opt.ratio});
 				
 				//把大图写入页面
 				$big.append($bigImg).appendTo('body');

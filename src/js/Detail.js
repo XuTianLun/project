@@ -1,19 +1,13 @@
 //load
-jQuery(function($){
-				//加载头部
-				$('#_head').load('head.html');
-			 //加载页脚部
-				$('#_footer').load('footer.html');
-				$('#_pos').load('pos.html');
-			});
+
 jQuery(function($){
 				$.ajax({
 					type:"get",
 					url:"/data/detail.json",
 					async:true,
-					dataType:"json",
+					dataType:'json',
 					success : function(res){
-						console.log(res);
+//						console.log(res);
 						var $goodsright = $('.goods-right');
 						var $smallpic = $('.smallpic');
 						var $goodsleft = $('.goods-left');
@@ -100,7 +94,7 @@ jQuery(function($){
 						
 						//放大镜
 						function fdj(){
-						$goodsleft.find('.fdj').xzoom({position:'right',width:400,height:400,backgroundcolor:"#FFCC00",opacity:0.2});
+						$goodsleft.find('.fdj').xzoom({position:'right',width:400,height:400,backgroundcolor:"#FFCC00",opacity:0.2,ratio:2});
                         }
 						fdj();
 						
@@ -123,22 +117,25 @@ jQuery(function($){
 	 			          var $goodnum = $goodcar.find('.good-sp').find('span');
 	 			          //获取购物车的坐标
 	 			          var $goodpos = $goodcar.offset();
-	 			          
+	 			        
 	 			           //复制图片动画，移动到商品列表中
 	 			           $copyImg.stop().animate({left:$goodpos.left,top:$goodpos.top+$goodcar.outerHeight(),width:0,heigth:0},1000,function(){
-	 			           	   //获取购物袋中商品的数量
-	 			           	   var _html = $goodnum.html();
-	 			           	   var $goodcarlist = $goodcar.find('.goodcar_list');
 	 			           	   $copyImg.remove();//移除复制的图片
-	 			           	   $goodcarlist.find('p').remove();//移除列表中的p标签
-	 			               $goodcarlist.find('h3').remove();//移除列表的H3标签
-	 			               $goodcarlist.find('input[type=button]').remove();//移除列表中的button
+	 			           	  var goods_message = [];//创建一个空数组，用于存储商品信息并存进Cookies
+	 			           	   var _html = parseInt($goodnum.html()); //购物袋中的数量
+	 			           	   var $goodcarlist = $goodcar.find('.goodcar_list');
+	 			           	   
+//	 			           	   $goodcarlist.find('p').remove();//移除列表中的p标签
+//	 			               $goodcarlist.find('h3').remove();//移除列表的H3标签
+                               $goodcarlist.empty();
+//	 			               $goodcarlist.find('input[type=button]').remove();//移除列表中的button
 	 			               //添加新的h3标签
 	 			               $('<h3>').html('购物袋中的商品').css({"border-bottom":"1px solid #ccc","font-size":"14px","margin":"10px","padding-bottom":"10px"}).prependTo($goodcarlist);
 	 			           	   var $ul = $('<ul/>');
 	 			           	   var $li = $('<li/>').css({"position":"relative","padding-bottom":"10px"});
-	 			           	
-	 			           	   //添加商品信息
+	 			           	   
+	 			           	   var nums = _html + parseInt(i); 
+	 			           	  // 添加商品信息
 	 			           	   $.each(res,function(idx,item){
 	 			           	   	//添加图片
 	 			           	   	if(item.bigimgurl){
@@ -148,47 +145,94 @@ jQuery(function($){
 	 			           	   	var $div = $('<div/>').css({"float":"left","width":"100px","margin-left":"10px"});
 	 			           	   	 $('<span/>').html(item.brand).css({"display":"block","color":"#666","font-size":"12px"}).appendTo($div);
 						        $('<span/>').html(item.theme).addClass('addgood_span').css({"display":"block","color":"#666","font-size":"12px"}).appendTo($div);
-							    $('<span/>').html('&yen;'+(item.price-item.price*item.off).toFixed(2)+"&times;"+i).css({"display":"block","color":"orangered","font-size":"16px"}).appendTo($div);
+							    $('<span/>').html('&yen;'+(item.price-item.price*item.off).toFixed(2)+"&times;"+(_html+parseInt(i))).css({"display":"block","color":"orangered","font-size":"16px"}).appendTo($div);
 				
 							    $div.appendTo($li);//div添加到li
-	 			           	   	}
+							    
+							    //将商品信添加到数组
+							    goods_message.push({goodname:item.theme,goodid:item.id,imgurl:item.bigimgurl,price:item.price,color:item.color,goodnum:nums});
+							    //获取商品信息cookies
+	 			                var goods_message_get = getCookie("goods_message");
+	 			                if(goods_message_get){
+	 			                console.log(goods_message_get);
+	 		                      var goods_message_get = JSON.parse(goods_message_get);
+	 		                       console.log(goods_message_get);
+	 		                      var istrue = true;//判断id是否相同
+	 		                     for(var j = 0 ;j<goods_message_get.length;j++){
+//	 		                     	console.log(11);
+	 		                     	if(goods_message_get[j].goodid == item.id){//id相同，改变相应的num值
+	 		                      	 	istrue = false;
+	 		                      	 	console.log(11);
+	 		                      	 	goods_message_get[j].goodnum += parseInt(i);
+	 		                      	 	goods_message_get = JSON.stringify(goods_message_get);
+	 		                      	 	var d=new Date;
+					                    d.setDate(d.getDate() + 10);
+					                    setCookie("goods_message",goods_message_get,d,"/");
+					                    }
+	 		                      }
+	 		                     //id不同
+	 		                      if(istrue){
+	 		                      	goods_message_get.push({goodname:item.theme,goodid:item.id,imgurl:item.bigimgurl,price:item.price,color:item.color,goodnum:nums});
+	 		                      	goods_message_get = JSON.stringify(goods_message_get);
+	 		                      	var d=new Date;
+					                d.setDate(d.getDate() + 10);
+					                setCookie("goods_message",goods_message_get,d,"/");
+	 		                      }
+	 		                     }else{
+							    //json序列化
+							    console.log(11);
+							    goods_message = JSON.stringify(goods_message);
+							    //创建cookies,以数组形式存储商品信息
+							    var d=new Date;
+					            d.setDate(d.getDate() + 10);
+					            setCookie("goods_message",goods_message,d,"/");
+							   }
+							    
+							   
+	 			           	  }
 	 			           	   	});
 	 			           	   	//添加删除按钮
 	 			           	   	 var $btnClose = $("<span/>");
 	 				             $btnClose.addClass("btn-close").html("&times;").appendTo($li);
+	 				             //删除按钮点击事件
 	 			           	   	$btnClose.click(function(){
-	 					         $(this).closest("ul").remove();//移除ul
 	 					         var _html = $goodnum.html();
-	 					         _html--;
-	 					         //创建cookies 商品数量
-	 			           	   var d=new Date;
-					           d.setDate(d.getDate() + 10);
-					           setCookie("goodnums",_html,d,"/");
-					           var cookiesnum = getCookie("goodnums");
-	 					         $goodnum.html(cookiesnum).css({'color':'orangered'});//更改购物袋商品的数量，减1 
-	 					         if(cookiesnum == 0){
-	 					         	$goodcarlist.find('h3').remove();//移除列表的H3标签
+	 					           _html = 0;
+//					                removeCookie("goods_message");
+                                    var goodsmessage = getCookie("goods_message");
+                                    
+                                    //删除cookies
+	 			           	        var d=new Date;
+	 			           	        setCookie("goods_message",goods_message,d,"/");
+	 					         	$goodcarlist.empty();//移除列表的所有子元素
 	 					         	$('<p/>').html('目前还没有任何商品').appendTo($goodcarlist);
 	 					         	$('<p/>').html('赶紧去选择自己心爱的商品吧！').appendTo($goodcarlist);
-	 					         	$goodcarlist.find('input[type=button]').remove();//移除列表中的button
-	 					         	$goodnum.html(cookiesnum).css({'color':'#000'});
-	 					         	 
-	 					         }
+	 					         	$goodnum.html("0").css({'color':'#000'});
 	 				             });
-
+//
+                               
 							   $li.appendTo($ul);   //li添加到ul，ul添加到商品列表
 							   $ul.appendTo($goodcarlist);//将ul添加到商品列表
 	 			           	   var $input = $('<input/>').attr({'type':'button'}).val('去购物袋结算').addClass('jiesuan').appendTo($goodcarlist);//添加新的button标签
 	 			           	   $input.click(function(){
 	 			           	   	  open("http://localhost:3000/project/src/html/goodscar_list.html");
 	 			           	   });
-	 			           	   _html++;
-	 			           	    //创建cookies 商品数量
-	 			           	   var d=new Date;
-					           d.setDate(d.getDate() + 10);
-					           setCookie("goodnums",_html,d,"/");
-					           var cookiesnum = getCookie("goodnums");
-	 			           	   $goodnum.html(cookiesnum).css({'color':'orangered'});//每点击一次购物袋中数量加1
+	 			           	   
+	 			           	    //获取最新商品信息 cookies
+	 			           	    var goodsmessage1 = getCookie("goods_message");
+	 			           	    if(goodsmessage1){
+	 			           	    var goodsmessage1 = JSON.parse(goodsmessage1);
+	 			           	    $.each(goodsmessage1, function(idx,ele) {
+	 			           	    	 var count = 0;
+	 			           	    	count += ele.goodname;
+	 			           	     $goodnum.html(ele.goodnum).css({'color':'orangered'});//每点击一次购物袋中数量增加	
+	 			           	    });
+	 			           	    }			           	   
+	 			           	   
+	 			           	    
+	 			           	    
+                               
+
 	 			           	  
 	 			           });
 						});
