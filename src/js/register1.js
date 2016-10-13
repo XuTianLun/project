@@ -4,10 +4,13 @@ jQuery(function($){
 		
 		jQuery(function($){
 			 var oldusername = getCookie("username");
-//			 var oldpassword = getCookie("password");
+			 var oldpassword = getCookie("password");
              if(oldusername){
 			 $('#username').val(oldusername);
 			 }
+             if(oldpassword){
+             	$('#password').val(oldpassword);
+             }
              
              $('#register').submit(function(){
              	
@@ -32,7 +35,7 @@ jQuery(function($){
 									istrue = false;
 									}else{
 								    var d=new Date;
-									d.setDate(d.getDate() + 1);
+//									d.setDate(d.getDate() + 1);
 									setCookie("username",username,d,"/");
 									setCookie("password",pwd,d,"/");
 									istrue = false;

@@ -15,7 +15,7 @@
 			    	$('.last').remove();
 			    	$('<a/>').html('注册').addClass('last').attr({"href":"http://localhost:3000/project/src/html/register.html"}).insertAfter($('#username'));
 //			    	removeCookie("username");
-			    	removeCookie("password");
+//			    	removeCookie("password");
 			    	
 			     });
 			    

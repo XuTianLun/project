@@ -1,9 +1,17 @@
 jQuery(function($){
-			$('#_footer').load('footer.html');
+//			$('#_footer').load('footer.html');
 		});
 		jQuery(function($){
+			 var oldusername = getCookie("username");
+			 var oldpassword = getCookie("password");
+             if(oldusername){
+			 $('#mobile_phone').val(oldusername);
+			 }
+             if(oldpassword){
+             	$('#password').val(oldpassword);
+             }
+			
 		    var $register = $('#register');
-		    
 		    var isfalse = false;//用于判断表单输入框是否全部正确
 		    var isphone = true;//判断是手机注册还是邮箱注册
 		    var arr =[];
