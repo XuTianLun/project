@@ -17,7 +17,7 @@ $(function(){
 					 var $a = $('<a/>').appendTo($div);
 		   			$('<img/>').attr('src',item.imgurl).addClass('pic').appendTo($a);
 		   			$a.click(function(){
-		   				open("http://localhost:3000/project/src/html/Detail.html");
+		   				open("Detail.html");
 		   			})
 		   			$('<p/>').html(item.brand).addClass('list_p').appendTo($div);
 		   			$('<h3/>').html(item.theme).addClass('list_h3').appendTo($div);

@@ -11,9 +11,9 @@
 			    	$('.last').html('退出').attr({"href":"#"});
 			    	
 			    	$('.last').click(function(){
-			     	$('#username').html('登录').attr({"href":"http://localhost:3000/project/src/html/register1.html"});
+			     	$('#username').html('登录').attr({"href":"register1.html"});
 			    	$('.last').remove();
-			    	$('<a/>').html('注册').addClass('last').attr({"href":"http://localhost:3000/project/src/html/register.html"}).insertAfter($('#username'));
+			    	$('<a/>').html('注册').addClass('last').attr({"href":"register.html"}).insertAfter($('#username'));
 //			    	removeCookie("username");
 //			    	removeCookie("password");
 			    	

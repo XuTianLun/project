@@ -217,7 +217,7 @@ jQuery(function($){
 							   $ul.appendTo($goodcarlist);//将ul添加到商品列表
 	 			           	   var $input = $('<input/>').attr({'type':'button'}).val('去购物袋结算').addClass('jiesuan').appendTo($goodcarlist);//添加新的button标签
 	 			           	   $input.click(function(){
-	 			           	   	  open("http://localhost:3000/project/src/html/goodscar_list.html");
+	 			           	   	  open("goodscar_list.html");
 	 			           	   });
 	 			           	   
 	 			           	    //获取最新商品信息 cookies
