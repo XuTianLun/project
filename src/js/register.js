@@ -133,7 +133,7 @@ jQuery(function($){
 		       }
 		    });
 		    //注册,若可以注册，创建cookei
-		    $('#register').submit(function(){
+		    $('form').submit(function(){
 	        
 	   
 		    	//手机注册

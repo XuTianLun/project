@@ -12,7 +12,7 @@ jQuery(function($){
              	$('#password').val(oldpassword);
              }
              
-             $('#register').submit(function(){
+             $('form').submit(function(){
              	
              	var username = $('#username').val();
 				var pwd = $('.password').val();
@@ -51,6 +51,6 @@ jQuery(function($){
 								},5000);
 					return false;
 				}
-				   
-             })
+//				   
+            });
 		});

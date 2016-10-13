@@ -83,7 +83,7 @@ $(function(){
 				var scrollTop = $(window).scrollTop();
 				// 当差不多滚动到底部是加载更多内容
 				if(scrollTop >= $(document).height() - $(window).height() - 500  && i < 4){
-					i++; 
+//					i++;
 					$.ajax();
 				}
 	});
