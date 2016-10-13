@@ -1,0 +1,59 @@
+[
+	{
+		
+		"leftimgurl":"img/the_same/147209068530_234x329.jpg",
+		"page":"1",
+		"rightimgurl":[
+		               {
+		                "small":"img/the_same/147381738016_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147338704697_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147313397124_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147313485510_275x180.jpg"
+		               }
+		              ]
+	},
+	{
+		
+		"leftimgurl":"img/the_same/147487198951_234x329.jpg",
+		"page":"2",
+		"rightimgurl":[
+		               {
+		                "small":"img/the_same/147321367455_293x293.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147381738016_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147321198173_293x293.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147487127542_234x329.jpg"
+		               }
+		              ]
+	},
+	{
+		
+		"leftimgurl":"img/the_same/147252853392_398x517.jpg",
+		"page":"3",
+		"rightimgurl":[
+		               {
+		                "small":"img/the_same/147186427629_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147203322415_275x180.jpg"
+		               },
+		               {
+		                "small":"img/the_same/147321269725_293x293.JPG"
+		               },
+		               {
+		                "small":"img/the_same/147278532357_275x180.jpg"
+		               }
+		              ]
+	}
+]

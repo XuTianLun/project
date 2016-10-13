@@ -1,45 +1,4 @@
-jQuery(function($){
-		     	//加载头部
-//		     	$('#_head').load('html/head.html .header',function(){
-//		     		//cookie 登录名 
-//		     		var oldusername = getCookie("username");
-//			     var oldpassword = getCookie("password");
-//			     console.log(oldusername);
-//			    if(oldusername){
-//			    	
-//			    	$('#username').html('欢迎您,'+oldusername).attr({"href":"#"});
-//			    	$('.last').html('退出').attr({"href":"#"});
-//			    	
-//			    	$('.last').click(function(){
-//			     	$('#username').html('登录').attr({"href":"http://localhost:3000/project/src/html/register1.html"});
-//			    	$('.last').remove();
-//			    	$('<a/>').html('注册').addClass('last').attr({"href":"http://localhost:3000/project/src/html/register.html"}).insertAfter($('#username'));
-////			    	removeCookie("username");
-//			    	removeCookie("password");
-//			    	
-//			     });		    
-//			    }
-////			    //cookie 购物袋
-//		     	});
-		     	//加载导航栏
-//		     	$('#_nav').load('html/head.html .nav',function(){
-//		     		//商品分类二级菜单
-//		     		$(".nav .list").on('mouseenter','#firstli',function(){
-//					$(this).parent().stop().next().show();
-//				}).on('mouseleave','#firstli',function(){
-//					
-//					$(this).parent().stop().next().fadeOut();
-//				})
-//				$(".nav .list1").find('li').on('mousemove',function(){
-//					$(this).addClass("bg").siblings().removeClass("bg");
-//				}).on('mouseenter',function(){
-//					$(this).parent().stop().show();
-//				}).on('mouseleave',function(){
-//					$(this).parent().stop().fadeOut();
-//				})
-//		     });  	
-		     	
-		     });
+
 //轮播插件
 jQuery(function($){
 				$.ajax({
@@ -48,8 +7,8 @@ jQuery(function($){
 					dataType:'json',
 					async:true,
 					success : function(res){
-                        console.log(res);
-                        console.log(typeof res);
+//                      console.log(res);
+//                      console.log(typeof res);
 						var $lbt = $('.lbt');
 						var $ul = $('<ul/>');
 						
@@ -60,7 +19,7 @@ jQuery(function($){
 						})
 						$ul.appendTo($lbt);
 					
-						
+						//调用轮播图插件函数
 			$lbt.myCarouselImg({
 				_width:1000,
 				_height:500,
@@ -100,7 +59,7 @@ jQuery(function($){
 							$samllimg.appendTo($samlldiv);
 							$samlldiv.appendTo($div);
 							$div.appendTo($brand_foot);
-							
+							//图片进出时高度改变
 							$div.on('mouseenter',function(){
 							$(this).children('div').stop().animate({height:120},300);
 							$(this).children().find('img').stop().animate({height:120},300);
@@ -129,7 +88,7 @@ jQuery(function($){
                         	$img.appendTo($div);
                         	$p.appendTo($div);
                         	$div.appendTo($hotstore);
-                        	
+                        	//图片进出时透明度改变
                         	$div.on('mouseenter',function(){
                         		$(this).css({"border":"1px solid #000"});
                         		$(this).children('img').stop().animate({opacity:0});
@@ -142,6 +101,58 @@ jQuery(function($){
                         });
 					}
 				});
+				
+				//商城同款ajax加载
+				$.ajax({
+					type:"get",
+					url:"/project/src/json/the_same.json",
+					dataType:'json',
+					async:true,
+					success : function(res){
+						var $the_same_page1 = $('.the_same_page1');
+						var $the_same_page2 = $('.the_same_page2');
+						var $the_same_page3 = $('.the_same_page3');
+						$.each(res, function(idx,item) {
+							if(item.page == 1){
+								var $leftdiv = $('<div/>').addClass('the_same_page_left').appendTo($the_same_page1);
+								$('<img/>').attr({'src':item.leftimgurl}).appendTo($leftdiv);
+								$.each(item.rightimgurl, function(idx,ele) {
+									var $rightdiv = $('<div/>').addClass('the_same_page_right').appendTo($the_same_page1);
+								     $('<img/>').attr({'src':ele.small}).appendTo($rightdiv);
+								});
+								
+							}
+							if(item.page == 2){
+								var $leftdiv = $('<div/>').addClass('the_same_page_left').appendTo($the_same_page2);
+								$('<img/>').attr({'src':item.leftimgurl}).appendTo($leftdiv);
+								$.each(item.rightimgurl, function(idx,ele) {
+									var $rightdiv = $('<div/>').addClass('the_same_page_right').appendTo($the_same_page2);
+								     $('<img/>').attr({'src':ele.small}).appendTo($rightdiv);
+								});
+								
+							}
+							if(item.page == 3){
+								var $leftdiv = $('<div/>').addClass('the_same_page_left').appendTo($the_same_page3);
+								$('<img/>').attr({'src':item.leftimgurl}).appendTo($leftdiv);
+								$.each(item.rightimgurl, function(idx,ele) {
+									var $rightdiv = $('<div/>').addClass('the_same_page_right').appendTo($the_same_page3);
+								     $('<img/>').attr({'src':ele.small}).appendTo($rightdiv);
+								});
+								
+							}
+						});
+						//商品同款点击动画
+						var $the_same_move = $('.the_same_move');
+						var liwidth = $the_same_page1.outerWidth();
+						
+						$the_same_move.on('click','li',function(){
+							var i = $(this).index();
+							$(this).addClass('bg').siblings().removeClass();
+							$('.the_same_div').find('.the_same_pic').stop().animate({left:-i*liwidth},300);
+						})
+					}
+				});
+				
 			
 		});
           

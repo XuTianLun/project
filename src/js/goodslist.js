@@ -2,7 +2,7 @@
 $(function(){
 	
 	var $list_good = $('.list_good');
-	var i = 0;
+	var i = 0; //通过改变i的值，使滚动加载时加载不同的数据
 	$.ajaxSetup({
 		type:"get",
 		url:"/project/src/json/goodlist.json",
@@ -73,16 +73,17 @@ $(function(){
 				}
 				
 			});
+		
 		}
 	});
 	$.ajax();
+	//懒加载
 	$(window).on('scroll',function(){
 				// 获取滚动条滚动过的距离
 				var scrollTop = $(window).scrollTop();
 				// 当差不多滚动到底部是加载更多内容
 				if(scrollTop >= $(document).height() - $(window).height() - 500  && i < 4){
-					i++;
-					console.log(i);
+					i++; 
 					$.ajax();
 				}
 	});

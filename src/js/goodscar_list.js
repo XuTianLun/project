@@ -7,6 +7,7 @@ jQuery(function($){
 			console.log(res);
 			var $list_div = $('.goodcar_list_end').find('.list_div');
 			var goods_message_get = getCookie("goods_message");
+			//判断cookies存不存在
 			 if(goods_message_get){//cookies存在时
 			 	var goods_message_get = JSON.parse(goods_message_get);//解析
 			 	console.log(goods_message_get);

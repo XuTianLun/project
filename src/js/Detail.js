@@ -23,7 +23,7 @@ jQuery(function($){
 							});
 								
 							
-							//右边商品简介
+							//右边商品信息简介
 							if(item.id){
 							var $li1 = $('<li/>').css({"padding-bottom":"10px","border-bottom":"1px dashed #ccc"});
 							 $('<p/>').html(item.brand).css({"color":"#666","font-size":"16px","margin-top":"10px"}).appendTo($li1);
@@ -172,7 +172,7 @@ jQuery(function($){
 					                    setCookie("goods_message",goods_message_get,d,"/");
 					                    }
 	 		                      }
-	 		                     //id不同
+	 		                     //id不同，把整个数组添加到cookie中
 	 		                      if(istrue){
 	 		                      	goods_message_get.push({goodname:item.theme,goodid:item.id,imgurl:item.bigimgurl,price:item.price,color:item.color,goodnum:nums});
 	 		                      	goods_message_get = JSON.stringify(goods_message_get);
@@ -180,7 +180,7 @@ jQuery(function($){
 					                d.setDate(d.getDate() + 10);
 					                setCookie("goods_message",goods_message_get,d,"/");
 	 		                      }
-	 		                     }else{
+	 		                     }else{//cookie不存在，将数组存进一个新的cookie
 							    //json序列化
 							    console.log(11);
 							    goods_message = JSON.stringify(goods_message);

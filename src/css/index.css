@@ -85,4 +85,100 @@
 	
 	}
 
-
+/*the same*/
+.same{
+	width: 100%;
+}
+.the_same{
+	width: 1000px;
+	position: relative;
+	border-top: 1px solid #666666;
+	margin:0 auto;
+	margin-top: 50px;
+}
+.the_same .the_same_head{
+	position:absolute;
+	padding:0 20px;
+	background: #fff;
+	text-align: center;
+	left:400px;
+	top:-25px;
+}
+.the_same .the_same_head p{
+	text-align: center;
+	font-size: 30px;
+	color: #000000;
+	font-weight: 600;
+}
+.the_same .the_same_foot{
+	padding-top: 50px;
+	width: 1000px;
+	
+	/*border: 1px solid #1E90FF;*/
+}
+.the_same .the_same_foot .the_same_move{
+	padding-top: 30px;
+	width: 1000px;
+	height: 30px;
+	
+}
+.the_same .the_same_foot .the_same_move li{
+	list-style: none;
+	float: left;
+	width: 321px;
+	margin-right: 10px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #999999;
+	background: #999999;
+}
+.the_same .the_same_foot .the_same_move .bg{
+	background: #000;
+}
+.the_same .the_same_foot .the_same_div{
+	position: relative;
+	margin-top: 30px;
+	width: 1000px;
+	height: 400px;
+	overflow: hidden;
+	/*border: 1px solid #303030;*/
+}
+.the_same .the_same_foot .the_same_div .the_same_pic{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 3000px;
+	
+}
+.the_same .the_same_foot .the_same_div .the_same_pic li{
+	width: 1000px;
+	height: 400px;
+	float: left;
+	/*border: 1px solid #1E90FF;*/
+}
+.the_same .the_same_foot .the_same_div .the_same_pic .the_same_page_left{
+	height: 400px;
+	width: 321px;
+	background: #999999;
+}
+.the_same .the_same_foot .the_same_div .the_same_pic .the_same_page_left img{
+	width: 321px;
+	height: 400px;
+}
+.the_same .the_same_foot .the_same_div .the_same_pic div{
+	float: left;
+}
+.the_same .the_same_foot .the_same_div .the_same_pic .the_same_page_right{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	height: 190px;
+	width: 321px;
+	background: #CCCCCC;
+}
+.the_same .the_same_foot .the_same_div .the_same_pic .the_same_page_right img{
+	width: 321px;
+	height: 190px;
+	border: 1px solid #C1C1C1;
+}
