@@ -9,7 +9,7 @@ jQuery(function($){
 			var goods_message_get = getCookie("goods_message");
 			//判断cookies存不存在
 			 if(goods_message_get){//cookies存在时
-			 	var goods_message_get = JSON.parse(goods_message_get);//解析
+			 	goods_message_get = JSON.parse(goods_message_get);//解析
 			 	console.log(goods_message_get);
 	         $.each(res, function(idx,item) {
 	  	             for(var i = 0;i<goods_message_get.length;i++){//当cookie所存的id与json的id相等时
@@ -95,27 +95,33 @@ jQuery(function($){
 	             //点击删除
 	             $goodul.on('click','.good_a',function(){
 	             	var i = $(this).closest('ul').index()-1;
+	             	console.log(i);
 	             	$list_div.find('.good_ul').eq(i).remove();
-	             	goods_message_get.splice(0,1);
-	             	console.log(goods_message_get.length);
-	             	if(goods_message_get.length == 0){
-	             		var d = new Date();
-	             		goods_message_get = JSON.stringify(goods_message_get);
-	             		setCookie("goods_message",goods_message_get,d,"/");
-	             	}else{
-	             		goods_message_get = JSON.stringify(goods_message_get);
-	 		            var d=new Date;
-					    d.setDate(d.getDate() + 10);
-					    setCookie("goods_message",goods_message_get,d,"/");
-	             	}
+	             	var goods_message_get1 = getCookie("goods_message");
+	             	 if(goods_message_get1){//cookies存在时
+			 	goods_message_get1 = JSON.parse(goods_message_get1);//解析
+			                           }
+	             	goods_message_get1.splice(i,1);
+	             	var goods_message_get2 = JSON.stringify(goods_message_get1);
+	 		        var d=new Date;
+					d.setDate(d.getDate() + 10);
+					setCookie("goods_message",goods_message_get2,d,"/");
+	             	
 	             })
 	             //清空购物车
 	             var $clearAll = $('.settlement').find('.clear').find('a');
 	             $clearAll.click(function(){
+
 	             	$list_div.find('.good_ul').remove();
-	             	var d=new Date;
-	             	goods_message_get = JSON.stringify(goods_message_get);
-					setCookie("goods_message",goods_message_get,d,"/");
+	             	var goods_message_get1 = getCookie("goods_message");
+	             	 if(goods_message_get1){//cookies存在时
+			 	goods_message_get1 = JSON.parse(goods_message_get1);//解析
+			                           }
+	             	goods_message_get1.splice(0,goods_message_get1.length);
+	             	var goods_message_get2 = JSON.stringify(goods_message_get1);
+	 		        var d=new Date;
+					d.setDate(d.getDate() + 10);
+					setCookie("goods_message",goods_message_get2,d,"/");
 	             })
 	        }
 	         

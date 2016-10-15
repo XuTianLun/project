@@ -134,8 +134,6 @@ jQuery(function($){
 		    });
 		    //注册,若可以注册，创建cookei
 		    $('form').submit(function(){
-	        
-	   
 		    	//手机注册
 		    	if(isphone == true){
 		    	var username = $('#mobile_phone').val();

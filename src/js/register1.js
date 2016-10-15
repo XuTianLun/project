@@ -17,6 +17,7 @@ jQuery(function($){
              	var username = $('#username').val();
 				var pwd = $('.password').val();
 				var istrue = true;
+				//json文件模拟后台数据，与username.json中的数据相同，则可以登录
 				$.ajax({
 					type:"get",
 					url:"/project/src/json/username.json",
@@ -24,9 +25,10 @@ jQuery(function($){
 					success:function(res){
 						console.log(res);
 						$.each(res, function(idx,item) {
+							//判断数据是否相同
 							if(item.username == username && item.pwd == pwd){
 								
-								    if($('#checkBox').prop('checked') == true){
+								    if($('#checkBox').prop('checked') == true){//判断复选框是否被勾选
 				   
 								    var d=new Date;
 									d.setDate(d.getDate() + 10);

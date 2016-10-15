@@ -17,6 +17,9 @@ $(function(){
 					 var $a = $('<a/>').appendTo($div);
 		   			$('<img/>').attr('src',item.imgurl).addClass('pic').appendTo($a);
 		   			$a.click(function(){
+		   				var d = new Date();
+		   				d.setDate(d.getDate() + 10);
+		   				setCookie("good_id",item.id,d,"/");
 		   				open("Detail.html");
 		   			})
 		   			$('<p/>').html(item.brand).addClass('list_p').appendTo($div);
@@ -32,7 +35,10 @@ $(function(){
 					 var $a = $('<a/>').appendTo($div);
 		   			$('<img/>').attr('src',item.imgurl).addClass('pic').appendTo($a);
 		   			$a.click(function(){
-		   				open("http://localhost:3000/project/src/html/Detail.html");
+		   				var d = new Date();
+		   				d.setDate(d.getDate() + 10);
+		   				setCookie("good_id",item.id,d,"/");
+		   				open("Detail.html");
 		   			})
 		   			$('<p/>').html(item.brand).addClass('list_p').appendTo($div);
 		   			$('<h3/>').html(item.theme).addClass('list_h3').appendTo($div);
@@ -43,11 +49,15 @@ $(function(){
 				}
 				if(i == 2){
 				if(item.page == 3){
+					
 					 var $div = $('<div/>').addClass('list_div');
 					  var $a = $('<a/>').appendTo($div);
 		   			$('<img/>').attr('src',item.imgurl).addClass('pic').appendTo($a);
 		   			$a.click(function(){
-		   				open("http://localhost:3000/project/src/html/Detail.html");
+		   				var d = new Date();
+		   				d.setDate(d.getDate() + 10);
+		   				setCookie("good_id",item.id,d,"/");
+		   				open("Detail.html");
 		   			})
 		   			$('<p/>').html(item.brand).addClass('list_p').appendTo($div);
 		   			$('<h3/>').html(item.theme).addClass('list_h3').appendTo($div);
@@ -62,7 +72,10 @@ $(function(){
 					  var $a = $('<a/>').appendTo($div);
 		   			$('<img/>').attr('src',item.imgurl).addClass('pic').appendTo($a);
 		   			$a.click(function(){
-		   				open("http://localhost:3000/project/src/html/Detail.html");
+		   				var d = new Date();
+		   				d.setDate(d.getDate() + 10);
+		   				setCookie("good_id",item.id,d,"/");
+		   				open("Detail.html");
 		   			})
 		   			$('<p/>').html(item.brand).addClass('list_p').appendTo($div);
 		   			$('<h3/>').html(item.theme).addClass('list_h3').appendTo($div);
@@ -77,12 +90,12 @@ $(function(){
 		}
 	});
 	$.ajax();
-	//懒加载
+	//懒加载,改变i的值，不同的值加载不同的数据
 	$(window).on('scroll',function(){
 				// 获取滚动条滚动过的距离
 				var scrollTop = $(window).scrollTop();
 				// 当差不多滚动到底部是加载更多内容
-				if(scrollTop >= $(document).height() - $(window).height() - 500  && i < 4){
+				if(scrollTop >= $(document).height() - $(window).height() - 500 ){
 //					i++;
 					$.ajax();
 				}
