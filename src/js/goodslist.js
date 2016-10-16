@@ -1,6 +1,5 @@
 
 $(function(){
-	
 	var $list_good = $('.list_good');
 	var i = 0; //通过改变i的值，使滚动加载时加载不同的数据
 	$.ajaxSetup({
@@ -96,7 +95,7 @@ $(function(){
 				var scrollTop = $(window).scrollTop();
 				// 当差不多滚动到底部是加载更多内容
 				if(scrollTop >= $(document).height() - $(window).height() - 500 ){
-//					i++;
+					i++;
 					$.ajax();
 				}
 	});
