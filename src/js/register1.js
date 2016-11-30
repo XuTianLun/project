@@ -11,9 +11,7 @@ jQuery(function($){
              if(oldpassword){
              	$('#password').val(oldpassword);
              }
-             
              $('form').submit(function(){
-             	
              	var username = $('#username').val();
 				var pwd = $('.password').val();
 				var istrue = true;

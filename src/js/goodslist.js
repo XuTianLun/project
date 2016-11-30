@@ -105,7 +105,6 @@ $(function(){
 		$(this).find('a').addClass("first_a").parent().siblings().find('a').removeClass("first_a");
 		i = $(this).index();
 		$list_good.empty();
-		
 		$.ajax();
 	})
                    
